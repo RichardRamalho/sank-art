@@ -1,0 +1,569 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  --font-family-header: "Josefin Sans", sans-serif;
+  --font-family-main: "Poppins", sans-serif;
+
+  /* colors */
+  --color-first: hsl(32, 59%, 87%);
+  --color-blue01: hsl(240, 95%, 8%);
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: hsl(0, 7%, 92%);
+  padding: 1rem;
+}
+
+body::before {
+  content: "";
+  width: 100%;
+  height: 50rem;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  background-image: url(https://static.meblobranie.pl/userFiles/shop/items/img/16040/topp_panele_gipsowe-48577-xl.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+header .logo {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(0, 0%, 93%);
+  padding: 1.6rem;
+  height: 10rem;
+  animation: topdown 700ms 350ms backwards;
+  border-radius: 0.4rem;
+}
+
+header h1 {
+  color: rgb(56, 16, 0);
+  text-align: center;
+  align-items: center;
+  padding-top: 6rem;
+  font-family: var(--font-family-header);
+  font-size: 7.2rem;
+  text-shadow: 4px 4px whitesmoke;
+}
+
+header h4 {
+  font-size: 2.4rem;
+  font-family: var(--font-family-header);
+  color: var(--color-blue01);
+  opacity: 0.7;
+  text-shadow: 2px 2px rgb(117, 117, 117);
+}
+
+header nav ul {
+  font-size: 2rem;
+  display: flex;
+  gap: 4.8rem;
+  list-style: none;
+  align-items: center;
+  text-decoration: none;
+  font-family: var(--font-family-main);
+}
+
+ul li a {
+  text-decoration: none;
+  color: var(--color-blue01);
+}
+
+ul li a:hover {
+  text-decoration: none;
+  color: hsl(240, 43%, 21%);
+  opacity: 0.5;
+}
+
+main {
+  text-align: center;
+  margin-top: 31rem;
+  animation: downtop 700ms 350ms backwards;
+  font-family: var(--font-family-main);
+}
+
+main .we {
+  text-align: center;
+  color: var(--color-blue01);
+  padding: 2rem 6rem;
+  margin: 2rem auto;
+  width: 100%;
+  background-image: url(https://th.bing.com/th/id/R.b100a46fff69aa6c36756d8e1276e287?rik=C8rPYRlsavLjBA&pid=ImgRaw&r=0);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main h2 {
+  font-size: 3.6rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  font-family: var(--font-family-main);
+  font-weight: 700;
+  color: var(--color-blue01);
+  text-shadow: 2px 2px rgb(134, 130, 130);
+}
+
+main .we p {
+  opacity: 0.8;
+  font-size: 1.8rem;
+}
+
+.card {
+  margin-top: 3.2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.2rem;
+  padding: 4.8rem 6rem;
+}
+
+.itens {
+  border-radius: 0.8rem;
+  overflow: hidden;
+  --delay: 0.2s;
+  animation: appear 0.4s var(--delay) backwards;
+  background-color: rgb(207, 205, 205);
+}
+
+.itens img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  transition: all 700ms ease-out;
+}
+
+.itens img:hover {
+  filter: contrast(115%) saturate(150%);
+  transform: scale(1.1);
+}
+
+.details {
+  padding: 2.2rem;
+  z-index: 1;
+  position: relative;
+}
+
+.details h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.6rem;
+}
+
+span {
+  margin-top: 1.2rem;
+  padding: 0.6rem;
+  background-color: rgb(207, 205, 205);
+  color: black;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  line-height: 0;
+  text-transform: uppercase;
+}
+
+.speakClients {
+  margin-top: 3.2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.2rem;
+  padding: 4.8rem 6rem;
+  background-color: rgb(226, 219, 219);
+  align-items: center;
+  justify-items: center;
+}
+
+.client {
+  border-radius: 0.8rem;
+  overflow: hidden;
+  background-color: rgb(207, 205, 205);
+  width: 60%;
+  padding: 3.2rem 4.5rem;
+  box-shadow: 6px 6px 10px rgba(68, 68, 68, 0.541);
+}
+
+.client h5 {
+  margin-bottom: 1.6rem;
+  font-size: 1.8rem;
+}
+
+.speakClients img {
+  border-radius: 50%;
+  width: 10.5rem;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+#coment {
+  width: 4rem;
+  color: var(--color-blue01);
+  filter: saturate(1.1);
+}
+
+button,
+input,
+fieldset,
+textarea {
+  border: none;
+  background: rgb(226, 226, 226);
+  border-radius: 0.4rem;
+}
+
+#contact {
+  padding: 7.8rem 3.9rem 6.5rem;
+}
+
+#contact form .input-wrapper {
+  margin-bottom: 2.4rem;
+  border: 1px solid var(--color-blue01);
+  border-radius: 1.6rem;
+  opacity: 0.6;
+}
+
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  border: 0.15rem solid var(--color-blue);
+  border-radius: 1.6rem;
+  padding: 1.2rem 1.6rem 1.4rem;
+  color: var(--color-blue01);
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: 600;
+}
+
+#contact form input {
+  padding-left: 5rem;
+}
+
+#contact form input::placeholder,
+#contact form textarea::placeholder {
+  color: var(--color-blue01);
+}
+
+#contact form textarea {
+  height: 12.6rem;
+  resize: none;
+}
+
+#name {
+  background: url(./src/img/user-circle.svg);
+  background-repeat: no-repeat;
+  background-position: 1.4rem;
+}
+
+#email {
+  background: url(./src/img/at.svg);
+  background-repeat: no-repeat;
+  background-position: 1.4rem;
+}
+
+#whatsapp {
+  background: url(./src/img/whatsapp-logo.svg);
+  background-repeat: no-repeat;
+  background-position: 1.4rem;
+}
+
+.icon {
+  position: fixed;
+  bottom: 6rem;
+  right: 3rem;
+  font-size: 3rem;
+  background-color: #3cff9e;
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 0.3rem;
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  text-decoration: none;
+  z-index: 100;
+  box-shadow: 2px 2px 2px #c0bdbd;
+}
+
+.icon img {
+  width: 100%;
+  color: #ffffff;
+}
+
+.icon .fab {
+  padding-top: 0.9rem;
+}
+
+.icon:hover {
+  background-color: #fff;
+  color: #029e3b;
+  font-weight: 900;
+  box-shadow: 2px 2px 20px #5fe690;
+  animation-name: vibrate;
+  animation-duration: 0.4s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 2.4rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  padding: 1.6rem;
+  height: 5rem;
+  width: 15.5rem;
+  background-color: var(--color-blue01);
+  color: hsla(0, 0%, 100%, 1);
+  border: none;
+  border-radius: 1.6rem;
+}
+
+button:hover {
+  filter: brightness(0.9);
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(94, 90, 90);
+  border-radius: 0.4rem 0.4rem 0rem 0rem;
+}
+
+footer .insta {
+  text-align: center;
+  font-weight: 600;
+  padding: 1.6rem;
+  animation: downtop 700ms 350ms backwards;
+  font-size: 1.8rem;
+  color: var(--color-blue01);
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+footer img {
+  width: 3.2rem;
+}
+
+
+@media (max-width: 786px) {
+  body::before {
+    height: clamp(20rem, 30vw, 30rem); /* Adjust as needed for mobile background */
+  }
+
+  header {
+    height: auto;
+  }
+
+  header .logo {
+    height: auto;
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: clamp(3rem, 5vw, 5rem); /* Adjust as needed for mobile */
+    padding-top: 2rem;
+  }
+
+  header h4 {
+    font-size: 1.8rem;
+  }
+
+  header nav ul {
+    font-size: clamp(1.4rem, 1.6vw, 1.6rem);
+    gap: 2.4rem;
+  }
+
+  main {
+    margin-top: clamp(10rem, 15vw, 15rem); /* Adjust as needed for mobile */
+  }
+
+  main h2 {
+    font-size: clamp(2rem, 2.8vw, 2.8rem); /* Adjust as needed for mobile */
+    margin-bottom: 1rem;
+  }
+
+  main .we {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  main .we p {
+    font-size: 1.4rem;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+
+  .itens img {
+    aspect-ratio: auto;
+  }
+
+  .details {
+    padding: 1rem;
+  }
+
+  .details h3 {
+    font-size: 1.4rem;
+  }
+
+  span {
+    margin-top: 0.6rem;
+    padding: 0.3rem;
+    font-size: 1rem;
+  }
+
+  .speakClients {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .client {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .client h5 {
+    font-size: 1.4rem;
+  }
+
+  .speakClients img {
+    width: clamp(5rem, 7vw, 7rem);
+    margin-bottom: 0.5rem;
+  }
+
+  #contact {
+    padding: clamp(2rem, 3vw, 3rem) clamp(1rem, 1.5vw, 1.5rem);
+  }
+
+  #contact form .input-wrapper {
+    margin-bottom: clamp(0.8rem, 1.2vw, 1.2rem);
+  }
+
+  #contact form input,
+  #contact form textarea {
+    padding: 1rem 1rem 1rem 4.6rem;
+    font-size: clamp(1.2rem, 1.4vw, 1.4rem);
+  }
+
+  #name,
+  #email,
+  #whatsapp {
+    background-position: 0.8rem;
+  }
+
+  .icon {
+    font-size: clamp(1.6rem, 2vw, 2rem);
+    bottom: clamp(2rem, 3vw, 3rem);
+    right: clamp(1rem, 1.5vw, 1.5rem);
+    width: clamp(3rem, 4vw, 4rem);
+    height: clamp(3rem, 4vw, 4rem);
+  }
+
+  button {
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    height: clamp(3rem, 4vw, 4rem);
+    width: clamp(9rem, 12vw, 12rem);
+  }
+
+  footer .insta {
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+
+  footer img {
+    width: clamp(1.8rem, 2.4vw, 2.4rem);
+}
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(+15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translatey(0);
+  }
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+  10% {
+    transform: translate(-2px, -2px);
+  }
+  20% {
+    transform: translate(2px, -2px);
+  }
+  30% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(2px, 2px);
+  }
+  50% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, -2px);
+  }
+  70% {
+    transform: translate(-2px, 2px);
+  }
+  80% {
+    transform: translate(-2px, -2px);
+  }
+  90% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
