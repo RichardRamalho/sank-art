@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sank-Art Decoração em gesso</title>
     <link rel="stylesheet" href="./style.css" />
-    <script type="module" src="./main.js" defer></script>
+    <script src="./main.js" defer></script>
     <link
       rel="shortcut icon"
       href="https://static.vecteezy.com/system/resources/previews/017/172/186/large_2x/circular-file-construction-tools-equipment-device-icon-set-collection-sticker-png.png"
@@ -202,21 +202,21 @@
           </fieldset>
 
           <button class="button">Enviar Mensagem</button>
-          <input type="hidden" name="_next" value="https://richardramalho.github.io/sankart/success.html">
-          <input type="hidden" name="_autoresponse" value="Recebemos sua mensagem, obrigado pelo contato e logo responderemos!">
+          <input
+            type="hidden"
+            name="_next"
+            value="https://richardramalho.github.io/sankart/success.html"
+          />
+          <input
+            type="hidden"
+            name="_autoresponse"
+            value="Recebemos sua mensagem, obrigado pelo contato e logo responderemos!"
+          />
         </form>
       </section>
 
-      <div class="btnZap">
-        <a
-          href="https://api.whatsapp.com/send/?
-       phone=%2B5511939446812&text&type=phone_number&app_absent=0"
-          class="icon"
-          target="_blank"
-        >
-          <i class="fab fa-whatsapp"
-            ><img src="./src/img/whatsapp-logo-4-1.png" alt="" /></i
-        ></a>
+      <div class="btnZap icon" onclick="WhatsAppOpen()" >
+        <img src="./src/img/whatsapp-logo-4-1.png" alt="" />
       </div>
 
       <footer>
