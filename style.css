@@ -30,10 +30,10 @@ body::before {
   top: 0px;
   left: 0px;
   z-index: -1;
-  background-image: url(https://static.meblobranie.pl/userFiles/shop/items/img/16040/topp_panele_gipsowe-48577-xl.jpeg);
+  background-image: url(https://storage.googleapis.com/aquitempe-212001.appspot.com/imagens/ef44f6dd-8c36-46e5-bbd1-efcc6d4ed1db/LK%20GESSO%20aquitempe7.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 header {
@@ -59,7 +59,7 @@ header h1 {
   padding-top: 6rem;
   font-family: var(--font-family-header);
   font-size: 7.2rem;
-  text-shadow: 4px 4px whitesmoke;
+  text-shadow: 3px 2px whitesmoke;
 }
 
 header h4 {
@@ -365,7 +365,7 @@ footer img {
 
 @media (max-width: 786px) {
   body::before {
-    height: clamp(20rem, 30vw, 30rem); /* Adjust as needed for mobile background */
+    height: clamp(20rem, 60vw, 30rem); /* Adjust as needed for mobile background */
   }
 
   header {
